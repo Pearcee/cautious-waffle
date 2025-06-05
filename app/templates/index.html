@@ -17,15 +17,15 @@
 </head>
 
 <body>
-    <h1>Welcome to My Page</h1>
-    <p>This is a simple HTML template.</p>
-    <p>Feel free to modify it as you wish!</p>
-    
-    <footer>
-        <p>&copy; 2023 My Website</p>
-    </footer>
 
-    <script src="{{ url_for('static', path='/js/app.js') }}" ></script>
+    <div class="container">
+        <div id="new-todo">
+            <input type="text" placeholder="Tasks to be done" />
+            <button type="button" id="submit">Add</button>
+        </div>
+        <div id="todos"></div>
+    </div>
+    <script src="{{ url_for('static', path='/js/app.js') }}"></script>
 
 </body>
 
