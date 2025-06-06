@@ -27,11 +27,23 @@ async def get_users(title,db: Session = Depends(get_db)):
 
 @router.delete("/{id}")
 async def get_users(id,db: Session = Depends(get_db)):
-    db.query(Todo).filter(Todo.id== id).delete()
-    # todo = db.query(Todo).filter(Todo.title == title).first()
-    # if todo:
-    #     db.delete(todo)
+    todo = db.query(Todo).filter(Todo.id== id).delete()
+    if not todo:
+        return {"message": "Todo not found"}
     db.commit()
-    # else:
-    #     return {"error": "Todo not found"}
     return {"message": "Todo deleted successfully"}
+
+@router.put("/{id}")
+async def update_user(id, request: TodoSchema, db: Session = Depends(get_db)):
+    todo = db.query(Todo).filter(Todo.id == id).first()
+    if not todo:
+        return {"message": "Todo not found"}
+    
+    todo.title = request.title
+    todo.completed = request.completed
+    todo.createdat = request.createdat
+    db.commit()
+    db.refresh(todo)
+    return todo
+
+
