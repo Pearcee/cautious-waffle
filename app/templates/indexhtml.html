@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple HTML template">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet"> -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="HTML, template, example">
+    <meta name="author" content="Your Name">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="new-todo">
+            <input type="text" placeholder="Tasks to be done" />
+            <button type="button" id="submit">Add</button>
+        </div>
+        <div id="todos"></div>
+    </div>
+    <script src="static/js/app.js"></script>
+    <!-- <script src="{{ url_for('static', path='/js/app.js') }}"></script> -->
+
+</body>
+
+</html>
