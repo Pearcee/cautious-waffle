@@ -1,25 +1,25 @@
 *,
 *::before,
 *::after {
-  padding: 1;
+  padding: 10;
   margin: 1;
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
+  height: 90%;
   background: linear-gradient(135deg, lightgray, white);
 }
 
 .container{
- border: 2px solid white;
- width: 40%;
+border: 2px solid white;
+ width: 95%;
  min-width: 450px;
- position: absolute;
- transform: translate(-50%, -50%);
- top: 65%;
- left: 50%;
- padding: 30px 40px;
+position: absolute;
+ /* transform: translate(-50%, -50%); */
+ /* top: 65%; */
+ /* left: 50%; */
+   padding: 30px 40px;
 }
 
 #new-todo{
