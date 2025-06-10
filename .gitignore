@@ -194,4 +194,4 @@ cython_debug/
 .cursorindexingignore
 
 *.db
-pwa-with-vanilla-js/*
+pwa-with-vanilla-js/
